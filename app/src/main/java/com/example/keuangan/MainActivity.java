@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setClick() {
-        adapterTransaksiku.setOnCallBack(new AdapterTransaksiku.onCallBack() {
+        adapterTransaksiku.setOnCallBack(new AdapterTransaksiku.OnCallBack() {
             @Override
             public void onTblHapus(Transaksiku transaksiku) {
                 hapusTransaksi(transaksiku);

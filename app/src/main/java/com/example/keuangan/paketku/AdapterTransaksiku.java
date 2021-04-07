@@ -19,10 +19,10 @@ public class AdapterTransaksiku extends RecyclerView.Adapter<AdapterTransaksiku.
     Context context;
     List<Transaksiku> list;
 
-    onCallBack OnCallBack;
+    OnCallBack onCallBack;
 
-    public void setOnCallBack(onCallBack onCallBack) {
-        OnCallBack = onCallBack;
+    public void setOnCallBack(OnCallBack onCallBack){
+        this.onCallBack = onCallBack;
     }
 
     public AdapterTransaksiku(Context context, List<Transaksiku> list) {
@@ -41,17 +41,17 @@ public class AdapterTransaksiku extends RecyclerView.Adapter<AdapterTransaksiku.
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         holder.teksData.setText(list.get(position).getIsi());
 
-        holder.tblHapus.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void  onClick(View view) {
-            onCallBack.onTblHapus(list.get(position));
-        }
-        });
-
         holder.tblEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onCallBack.onTblEdit(list.get(position));
+            }
+        });
+
+        holder.tblHapus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCallBack.onTblHapus(list.get(position));
             }
         });
     }
@@ -75,7 +75,7 @@ public class AdapterTransaksiku extends RecyclerView.Adapter<AdapterTransaksiku.
         }
     }
 
-    public interface onCallBack{
+    public interface OnCallBack{
         void onTblHapus(Transaksiku transaksiku);
         void onTblEdit(Transaksiku transaksiku);
 
