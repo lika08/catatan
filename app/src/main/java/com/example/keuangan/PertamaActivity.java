@@ -7,21 +7,20 @@ import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AwalNew extends AppCompatActivity {
+public class PertamaActivity extends AppCompatActivity {
 
-    Button btnCheck;
+    Button btnGet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.new_awal);
+        setContentView(R.layout.activity_pertama);
 
-        btnCheck = findViewById(R.id.btnCheck);
-
-        btnCheck.setOnClickListener(new View.OnClickListener() {
+        btnGet = (Button)  findViewById(R.id.btnGet);
+        btnGet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AwalNew.this, MainActivity.class);
+                Intent intent = new Intent(PertamaActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -31,5 +30,3 @@ public class AwalNew extends AppCompatActivity {
 
 
 }
-
-
