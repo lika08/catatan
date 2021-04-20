@@ -13,6 +13,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -103,14 +104,14 @@ public class AwalActivity extends AppCompatActivity {
             }
         });
 
-
-        btnGetStarted.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent mainActivity = new Intent (getApplicationContext(), MainActivity.class);
-                startActivity(mainActivity);
-            }
-        });
+//
+//        btnGetStarted.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent mainActivity = new Intent (getApplicationContext(), MainActivity.class);
+//                startActivity(mainActivity);
+//            }
+//        });
 
 
     }
